@@ -9,6 +9,7 @@ public class Pantallas {
         this.nombre = nombre;
         this.ruta = ruta;
     }
+
     
     public String getNombre() {
         return nombre;
@@ -22,5 +23,4 @@ public class Pantallas {
     public void setRuta(String ruta) {
         this.ruta = ruta;
     }
-    
 }

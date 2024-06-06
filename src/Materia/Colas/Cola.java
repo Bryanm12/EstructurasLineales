@@ -1,0 +1,43 @@
+package Materia.Colas;
+import java.util.NoSuchElementException;
+import Materia.Models.Node;
+
+public class Cola {
+    private Node first;
+    private Node last;
+    public Cola(){
+        this.first= null;
+        this.last = null;
+    }    
+
+    //Metodo para agregar un Node a la cola
+    public void addNode(int value){
+        Node nuevoNodo = new Node(value);
+        if(isEmpty()){
+            first = nuevoNodo;
+            last = nuevoNodo;
+        }else{
+            last.next=nuevoNodo;
+            last=nuevoNodo;
+        }
+    }
+    public int remove(){
+        if(isEmpty()){
+            throw new NoSuchElementException("La cola está vacía.");
+        }
+        int value=first.value;
+        if(first==null){
+            last=null;
+        }
+        return value;
+    }
+    public int peek(){
+        if(isEmpty()){
+            throw new NoSuchElementException("La cola está vacía.");
+        }
+        return first.value;
+    }
+    public boolean isEmpty(){
+        return first == null;
+    }
+}
