@@ -5,6 +5,7 @@ import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
 import Materia.Ejercicio_01_sign.SignValidator;
 import Materia.Ejercicio_02_sorting.StackSorter;
+import Materia.ListasEnlazadas.ListaEnlazada;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -88,5 +89,36 @@ public class App {
             System.out.print(numeros.pop()+"->");
         }
         System.out.println();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ListaEnlazada lista = new ListaEnlazada();
+        lista.addNode(1);
+        lista.addNode(4);
+        lista.addNode(3);
+        lista.addNode(6);
+        
+        lista.print();
+
+        lista.deleteNode(1);
+        lista.print();
+        lista.deleteNode(3);
+        lista.print();
     }
 }
