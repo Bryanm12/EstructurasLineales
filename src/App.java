@@ -3,6 +3,8 @@ import Materia.Pilas.PilasGenerica;
 import Materia.Models.Pantallas;
 import Materia.Colas.Cola;
 import Materia.Colas.ColaGenerica;
+import Materia.Ejercicio_01_sign.SignValidator;
+import Materia.Ejercicio_02_sorting.StackSorter;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -63,5 +65,28 @@ public class App {
         System.out.println("Estoy en la pantalla \t"+ queueGeneric.peek().getNombre());
         System.out.println("El tamaño de la cola es: "+queueGeneric.size());
 
+        SignValidator validar = new SignValidator();
+        System.out.println(validar.isValid("([])"));
+
+        PilasGenerica<Integer> numeros =  new PilasGenerica<>();
+        numeros.push(2);
+        numeros.push(9);
+        numeros.push(11);
+        numeros.push(3);
+        numeros.push(5);
+        System.out.println("Los numeros son: "+numeros);
+        //while(!numeros.isEmpty()){
+        //   System.out.print(numeros.pop()+"->");
+            
+        //}
+        //System.out.println();
+
+        StackSorter ordenado = new StackSorter();
+        ordenado.sortStack(numeros);
+        System.out.println("Los números ordenados son:" );
+        while(!numeros.isEmpty()){
+            System.out.print(numeros.pop()+"->");
+        }
+        System.out.println();
     }
 }
