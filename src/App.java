@@ -6,6 +6,7 @@ import Materia.Colas.ColaGenerica;
 import Materia.Ejercicio_01_sign.SignValidator;
 import Materia.Ejercicio_02_sorting.StackSorter;
 import Materia.ListasEnlazadas.ListaEnlazada;
+import Ejercicio_03_LinkedLists.LinkedListEjr;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -113,12 +114,23 @@ public class App {
         lista.addNode(4);
         lista.addNode(3);
         lista.addNode(6);
-        
         lista.print();
+        System.out.println("tamano:"+lista.size());
 
         lista.deleteNode(1);
         lista.print();
         lista.deleteNode(3);
         lista.print();
+
+        lista.size();
+
+        ListaEnlazada lista2 = new ListaEnlazada();
+        lista2.addNode(1);
+        lista2.addNode(2);
+        lista2.addNode(5);
+        lista2.addNode(7);
+        lista2.addNode(6);
+        LinkedListEjr posicion = new LinkedListEjr();
+        System.out.println(posicion.getByPos(34, lista2));
     }
 }

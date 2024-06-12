@@ -2,6 +2,7 @@ package Materia.ListasEnlazadas;
 import Materia.Models.Node;
 public class ListaEnlazada {
     public Node head;
+    public int size;
     public ListaEnlazada(){
 
     }
@@ -15,18 +16,20 @@ public class ListaEnlazada {
         Node current = head;
         while (current.next != null) {
             current = current.next;
+            size ++;
         }
 
         current.next = new Node(value);
 
     }
 
-    ///Metodo para elminar
+    ///Metodo para eliminar
     public void deleteNode(int value){
         if(head == null) return; //No hay elementos no hagas nada
 
         if(head.value== value){
             head = head.next;
+            size --;
             return;
         }
 
@@ -57,6 +60,9 @@ public class ListaEnlazada {
         System.out.println("Node -> "+current.value);
         System.out.println("Fin de la lista.");
 
+    }
+    public int size(){
+        return size;
     }
 
 }
